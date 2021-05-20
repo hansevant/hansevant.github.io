@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: black;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-image: url(image/darkbubble.png);
+}
+
+header{
+    display: inline;
+}
+
+.title{
+    color: white;
+    font-size: 40px ;
+    margin-left: 20px;
+    cursor: text;
+}
+
+h3{
+    color: white;
+    margin: 50px;
+}
+
+.flex-container p{
+    font-size: 33.6px;
+}
+
+nav{
+    background-image: url(image/darkbubble.png);
+    height: 80px;
+    padding: 6px;
+    top: 0;
+    border-bottom: 1px solid white;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+nav ul li a{
+    margin-right: 40px;
+    color:gold;
+}
+nav ul li a:hover{
+    margin-right: 40px;
+    color:goldenrod;
+    transition: .7s;
+}
+
+.checkbtn{
+    font-size: 20px;
+    color: gold;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    nav{
+        position: sticky;
+        z-index: 9999;
+    }
+    
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 50vh;
+      background: linear-gradient(70deg, gold , goldenrod);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      border-bottom: 2px solid white;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 30px;
+      color: #1f1f1f;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+
+main{
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    background: linear-gradient(185deg, gold , goldenrod);
+    height: 50vh;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+article {
+    font-size: 50px;
+    line-height: 85px;
+}
+span{
+    border-top: 2px solid white;
+}
+
+.flex-container{
+    margin: 20px auto;
+    border: 0px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container div{
+    background-color: goldenrod;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 2px solid white;
+    height: 300px;
+    width: 400px;
+    margin: 0px 40px 60px;
+    transition:.8s;
+    cursor:pointer;
+}
+
+.flex-container div:hover{
+    transform: scale(1.1);
+    box-shadow:0px 0px 40px gold;
+}
+
+img{
+    border-top: 4px solid white;
+    width: 100%;
+    height: 246.5px;
+    object-fit: cover;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.container-2{
+    margin: auto;
+    background: linear-gradient(360deg, gold , goldenrod);
+    padding: 20px;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+
+
+.contact-links {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 900px;
+    margin-top: -20px;
+    flex-wrap: wrap;
+    border: 2px solid #1f1f1f;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    margin: 10px 20px;
+    text-shadow: 1px 1px 1px #1f1f1f;
+    transition: transform 1s ease-out;
+    color: #1f1f1f;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .contact-links {
+        border: 0px solid black;
+      width: 600px;
+    }
+    .contact-details{
+        margin: 10px 20px 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .contact-links {
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .contact-links {
+      width: 200px;
+    }
+  }
+
+  .contact-details:hover {
+    transform: rotate(360deg);
+  }
+
+  i{
+      font-size: 60px;
+  }
+
+.to-top{
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active{
+    bottom: 55px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+    .to-top.active{
+        display: none;
+    }
+}
+@media screen and (max-width:550px) {
+    article {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+#my-profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: absolute;
+    bottom:-1100px;
+    left:30px;
+    cursor: pointer;
+}
+
+.overlay .close{
+    padding: 2px 5px;
+    position: absolute;
+    background-color: white;
+    left: 55%;
+    top: 2%;
+    transition: .8s;
+}
+
+.overlay{
+    position: fixed;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0);
+    z-index:9999;
+    transition: .8s;
+}
+
+.overlay:target  {
+    height: auto;
+    width: auto;
+    bottom: 0;
+    right: 0;
+    background:rgba(0, 0, 0, 0.85);
+}
+
+.biodata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 50px auto;
+    width: 400px;
+    height: 600px;
+    background-color: goldenrod;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.biodata h2{
+    text-align: center;
+    width: 300px ;
+    border-bottom: 2px solid black;
+}
+
+.biodata img{
+   margin-top: 15px;
+    border-radius: 50%;
+    border: 4px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+table{
+    font-size: 24px;
+}
+
+th{
+    text-align: right;
+}
+
+td{
+    text-indent: 5px;
+}
+
+footer{
+    background-image: url(image/darkbubble.png);
+    height: 40px;
+    color: white;
+    line-height: 36px;
+    margin: 0px 10px;
+    text-align: center;
+}
