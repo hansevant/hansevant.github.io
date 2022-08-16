@@ -1,0 +1,419 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: montserrat;
+    }
+
+    nav {
+      background: crimson;
+      height: 80px;
+      width: 100%;
+      border-bottom: 6px solid white;
+      position: fixed;
+    }
+
+    label.logo {
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      font-weight: bold;
+      padding-left: 100px;
+    }
+
+    nav ul {
+      float: right;
+      margin-right: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 17px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    a.active,
+    a:hover {
+      background: firebrick;
+      transition: .5s;
+    }
+
+    .checkbtn {
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      margin-top: 25px;
+      display: none;
+    }
+
+    #check {
+      display: none;
+    }
+
+    @media (max-width: 952px) {
+      label.logo {
+        font-size: 28px;
+        padding-left: 30px;
+      }
+
+      nav ul li a {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width:720px) {
+      .box1 {
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShT9pF25WLwN85A3QubWdD9qmnaG84UK_WzA&usqp=CAU) no-repeat;
+        background-size: auto;
+      }
+
+      .box2 {
+        background: url(https://i.ytimg.com/vi/h-GNNy8WKvw/maxresdefault.jpg) no-repeat;
+        background-size: cover;
+        border-top: 6px solid white;
+      }
+
+      .box3 {
+        background: url(https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0913%2Fr741004_2_1296x729_16%2D9.jpg) no-repeat;
+        background-size: cover;
+        border-top: 6px solid white;
+      }
+
+      footer h3{
+        padding-bottom: 10px;
+      }
+
+      #title{
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 858px) {
+      .checkbtn {
+        display: block;
+      }
+
+      nav ul {
+        position: fixed;
+        width: 300px;
+        border-right: 6px solid white;
+        border-bottom: 6px solid white;
+        height: 100vh;
+        background: lightslategray;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+        background: crimson;
+        border-radius: 8px;
+        margin: 30px 10px;
+      }
+
+      nav ul li a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      a:hover,
+      a.active {
+        background: none;
+        color: navy;
+      }
+
+      #check:checked~ul {
+        left: 0;
+      }
+    }
+
+    #home,
+    #early-life,
+    #awards {
+      text-align: center;
+      max-width: 720px;
+      margin: auto;
+      padding: 20px;
+      color: rgb(255, 255, 255);
+      background: rgba(119, 136, 153, 0.70);
+    }
+
+    .box1 {
+      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShT9pF25WLwN85A3QubWdD9qmnaG84UK_WzA&usqp=CAU) no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0;
+      margin-top: 75px;
+    }
+
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      color: crimson;
+      outline: 4px solid black;
+    }
+
+    h3 {
+      font-size: 20px;
+      text-align: center;
+      overflow: hidden;
+      font-variant: small-caps;
+    }
+
+    footer h3 {
+      background: navy;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .box2 {
+      background: url(https://i.ytimg.com/vi/h-GNNy8WKvw/maxresdefault.jpg) no-repeat;
+      background-size: cover;
+      border-top: 6px solid white;
+    }
+
+    .box3 {
+      background: url(https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0913%2Fr741004_2_1296x729_16%2D9.jpg) no-repeat;
+      background-size: cover;
+      border-top: 6px solid white;
+    }
+
+    ul {
+      max-width: 550px;
+      margin: 0 auto 20px auto;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 18px;
+
+    }
+
+    li {
+      margin: 16px 0;
+    }
+
+    #headline {
+      margin: 15px 0;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    footer {
+      border-top: 6px solid white;
+      background: navy;
+      color: white;
+      height: 50px;
+      padding-top: 10px;
+      padding-bottom: 55px;
+      border-bottom: 6px solid white;
+
+    }
+
+    #awards p {
+      text-align: center;
+    }
+
+    a {
+      color: lightslategrey;
+    }
+
+    #red {
+      background: linear-gradient(35deg, crimson, navy);
+      left: 10%;
+      animation-timing-function: linear;
+    }
+
+    #blue {
+      background: linear-gradient(35deg, navy, crimson);
+      left: 85%;
+      animation-timing-function: ease-out;
+    }
+
+    .balls {
+      border-radius: 50%;
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      top: 60%;
+      animation-name: jump;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes jump {
+      50% {
+        top: 10%;
+      }
+    }
+  </style>
+  <div class="balls" id="red"></div>
+  <div class="balls" id="blue"></div>
+</head>
+
+<body>
+
+  <main id="main">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Tribute Page</label>
+      <ul>
+        <li><a href="#home">About</a></li>
+        <li><a href="#early-life">Early Life</a></li>
+        <li><a href="#awards">Awards and Honors</a></li>
+      </ul>
+    </nav>
+
+    <div class="box1">
+      <section id="home">
+        <h1 id="title">Russel Westbrook</h1>
+        <div id="img-div">
+          <img id="image"
+            src="http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQ4CWhFe3yGBLImwCGG6PbjDd5TfrK6AWP3JOquFv1y30ya6_MgX-uPrlYwB_zH">
+          <figcaption id="img-caption">Russell Westbrook is the most important player in the brief history of the OKC
+            Thunder.
+        </div>
+        </br>
+      </section>
+    </div>
+    <div class="box2">
+      <section id="early-life">
+        <p id="tribute-info">
+          Westbrook was born in Long Beach, California, to Russell Westbrook Jr. and Shannon Horton. He has a younger
+          brother named Raynard. Growing up in Hawthorne, Westbrook and his best friend Khelcey Barrs III had hopes of
+          going to UCLA and playing together. In May 2004, Barrs died from an enlarged heart during a pickup
+          game.</br></br>
+          Westbrook entered Leuzinger High School as a point guard who stood only 5 ft 8 in (1.73 m) tall and weighed
+          only 140 pounds (64 kg), although he did have large (size 14) feet. He did not start on his school's varsity
+          team until his junior year, and did not receive his first college recruiting letter until the summer before
+          his senior year. Westbrook grew to his adult height of 6 ft 3 in (1.91 m) that same summer.
+          </br></br>
+          During his senior year, Westbrook averaged 25.1 points, 8.7 rebounds, 3.1 steals, and 2.3 assists and helped
+          lead them to a 25–4 record. That same season, he recorded 14 double-doubles, scored 30 or more points on eight
+          separate occasions, and registered a career-best 51 points at Carson on January 6, 2006. Westbrook did not
+          attract much attention from top college basketball programs until head coach Ben Howland offered him a
+          scholarship to play for the UCLA Bruins after Jordan Farmar declared for the NBA draft.</br></br>
+          Westbrook wore number 0 throughout his career at UCLA. As a freshman in 2006–07, he played as a back up to
+          Darren Collison and was primarily used as a defender and energy player off the bench. Westbrook averaged 3.4
+          points, 0.8 rebounds, and 0.7 assists on the year. The next season, Collison was injured and Westbrook was
+          named the starter. He finished the season averaging 12.7 points, 3.9 rebounds, 4.7 assists and 1.6 steals. At
+          the end of the year, he was named All-Pac-10 Third Team and won the Pac-10 Defensive Player of the Year.
+          </br>
+          UCLA advanced to the Final Four during each of Westbrook's seasons with the team. In 2007, they lost to
+          eventual national champion Florida, 76–66 and in 2008, they lost 78–63 to Memphis. After two years at UCLA, he
+          decided to forgo his final two years and enter the 2008 NBA draft.
+        </p>
+      </section>
+    </div>
+    <div class="box3">
+      <section id="awards">
+        <h2>Awards and Honors</h2>
+        <h3 id="headline">National Basketball Association</h3>
+        <ul id="tribute-info">
+          <li><strong>(2020)</strong> - All-NBA Third Team </li>
+          <li>
+            <strong>(2019)</strong> - NBA assists leader, All-NBA Third Team, NBA All-Star
+          </li>
+          <li>
+            <strong>(2018)</strong> - NBA assists leader, All-NBA Second Team, NBA All-Star
+          </li>
+          <li>
+            <strong>(2017)</strong> - NBA scoring champion, All-NBA First Team, NBA All-Star, NBA Most Valuable Player
+          </li>
+          <li>
+            <strong>(2016)</strong> - All-NBA First Team, NBA All-Star Game MVP, NBA All-Star
+          </li>
+          <li>
+            <strong>(2015)</strong> - NBA scoring champion, All-NBA Second Team, NBA All-Star Game MVP, NBA All-Star
+          </li>
+          <li>
+            <strong>(2013)</strong> - All-NBA Second Team, NBA All-Star
+          </li>
+          <li>
+            <strong>(2012)</strong> - All-NBA Second Team, NBA All-Star
+          </li>
+          <li>
+            <strong>(2011)</strong> - All-NBA Second Team, NBA All-Star
+          </li>
+          <li>
+            <strong>(2009)</strong> - NBA All-Rookie First Team
+          </li>
+        </ul>
+        <h3 id="headline">College</h3>
+        <ul>
+          <li>
+            <strong>2008</strong> - All-Pac-10 Third Team, Pac-10 Defensive Player of the Year, Pac-10 All-Tournament
+            Team, Pac-10 All-Defensive Team, CollegeInsider.com All-Defensive Team
+          </li>
+        </ul>
+        <h3 id="headline">High school</h3>
+        <ul>
+          <li>
+            <strong></strong>First-team All-CIF Division I, Third-team All-State
+            2×, Most Valuable Player of the Bay League
+          </li>
+        </ul>
+        <br>
+        <p>"I say, 'Why not' to everything. I've always had to prove myself to people growing up. Magic Johnson was my
+          favorite player growing up. Shoes make an outfit. Every day when I get on the floor I give it my all and play
+          because you never know what tomorrow holds. My childhood, I wouldn't say it was bad."
+          </br></br><i>
+            Russell Westbrook III</i></p>
+      </section>
+    </div>
+  <footer>
+    <h3>
+      If you have time, you should read more about this GOAT player being
+      on his
+      <a id="tribute-link" href="https://en.wikipedia.org/wiki/Russell_Westbrook" target="_blank">Wikipedia entry</a>.
+    </h3>
+  </footer>
+</main>
+</body>
+
+</html>
