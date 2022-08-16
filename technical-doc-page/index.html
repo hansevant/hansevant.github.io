@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <header>C++ Documentation</header>
+            <ul>
+                <li><a href="#pendahuluan" class="nav-link">Pendahuluan</a></li>
+                <li><a href="#sejarah" class="nav-link">Sejarah</a></li>
+                <li><a href="#cara_kerja" class="nav-link">Cara Kerja</a></li>
+                <li><a href="#INTEGRATED_DEVELOPMENT_ENVIRONMENT" class="nav-link">Integrated Development Environment</a></li>
+                <li><a href="#variabel" class="nav-link">Variabel</a></li>
+                <div class="heart"></div>
+                <div class="heart2"></div>
+                <div class="heart3"></div>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main id="main-doc">
+        <section id="pendahuluan" class="main-section">
+            <header><h1>Pendahuluan</h1>
+            </header>
+                <article>
+                    <p>C++ merupakan bahasa pemrograman yang powerful yang sesuai untuk orang dengan sedikit
+                        atau tanpa pengalaman pemrograman. Oleh karena itu, di perkuliahan akan diajarkan bahasa
+                        pemrograman C++ pada tingkat awal. Jika ingin membuat sebuat software yang berhubungan
+                        dengan hardware maka dapat menggunakan bahasa pemrograman C++. Pada bahasa
+                        pemrograman C++, dapat dipelajari dasar - dasar dari pemrograman seperti variabel, tipe data,
+                        dan lain - lain. Maka dari itu C++ merupakan bahasa pemrograman yang merupakan hasil
+                        perkembangan dari bahasa C. C++ memiliki class, pointer, dan sebagainya yang tidak ada di
+                        bahasa pemrograman C. C++ merupakan bahasa pemrograman yang multiplatform.</p>
+                        <img src="img/c++.jpg" alt="">
+                    </article>
+        </section>
+        <section id="sejarah" class="main-section">
+            <header><h1>Sejarah</h1>
+            </header>
+                <article>
+                    <p>C++ merupakan bahasa pengembangan dari bahasa C. C++ dibuat oleh Bjarne Stroustrup pada
+                        tahun 1983. C++ mendukung object oriented programming atau OOP. Awalnya C++ mempunyai
+                        nama C with classes dan kemudian berganti nama menjadi C++ pada tahun 1983. Pada tahun
+                        1998, C++ memiliki standar internasional C++ 98. Meskipun bahasa ini termasuk yang sudah
+                        cukup tua namun terus direvisi hingga versi terbarunya pada tahun 2020 yaitu C++ 20</p>
+                        <img src="img/bjarne.jpg" alt="">
+                    </article>
+        </section>
+        <section id="cara_kerja" class="main-section">
+            <header><h1>Cara Kerja</h1>
+            </header>
+                <article>
+                    <img src="img/cara-kerja.jpg" alt="">
+                    <p>Program yang dibuat dalam text editor disebut dengan source code. Pada C++, source code terdiri
+                        dari 2 file yaitu file program (.cpp) serta file header (.h). Source code kemudian memasuki tahap
+                        COMPILE sehingga dapat dimengerti oleh bahasa mesin atau Machine Language dan
+                        menghasilkan sebuah file dengan ekstensi .obj. Setelah dicompile, proses selanjutnya adalah
+                        LINKER. Pada tahap ini, file berekstensi .obj akan digabungkan dengan file lain seperti library
+                        eksternal dan file object lain, sehingga akan menghasilkan sebuah file berekstensi .exe yang dapat
+                        digunakan di multiplatform. Untuk dapat membuat program C++, dapat menggunakan sublime
+                        text sebagai salah satu contoh text editor dan MinGW sebagai compiler. Jika ingin menggunakan
+                        aplikasi yang didalamnya sudah terdapat text editor dan compiler dapat menggunakan IDE
+                        (Integrated Development Environment).
+                        </p>
+                </article>
+        </section>
+        <section id="INTEGRATED_DEVELOPMENT_ENVIRONMENT" class="main-section">
+            <header><h1>Integrated Development Environment</h1>
+            </header>
+                <article>
+                    <p>IDE (Integrated Development Environment) merupakan aplikasi perangkat lunak yang
+                        memberikan fasilitas secara lengkap untuk proses pengembangan software</p>
+                        <p>IDE biasanya mempunyai fasilitas dasar seperti :</p>
+                        <ul>
+                            <li>Editor</li>
+                            <li>Compiler</li>
+                            <li>Debugger</li>
+                        </ul>
+                        <p>Terdapat banyak IDE yang dapat digunakan seperti :</p>
+                        <ul>
+                            <li>Intellij IDEA</li>
+                            <li>NetBeans</li>
+                            <li>Eclipse</li>
+                            <li>CodeBlocks</li>
+                        </ul>
+                        <img src="img/ide.jpg" alt="">
+                </article>
+        </section>
+        <section id="variabel" class="main-section">
+            <header><h1>Variabel</h1>
+            </header>
+                <article>
+                    <p>Variabel adalah nama yang diasosiasikan dengan data yang disimpan dalam memori. Variabel
+                        dibuat untuk menyimpan suatu data yang nantinya akan dirujuk. Untuk membuat variabel,
+                        diharuskan untuk mendefinisikannya dengan menulis tipe data yang disimpan dan nama variabel
+                        tersebut.</p>
+                        <p>Bentuk umum :
+                        </p>
+                        <code>tipe nama;</code>
+
+                        <ul>
+                            <li>tipe : Menunjukkan tipe data.
+                            </li>
+                            <li>nama : Menunjukkan nama variabel.</li>
+                        </ul>
+
+                        <p>Contoh penggunaan dari pendeklarasian variabel adalah sebagai berikut :</p>
+                        <code>int counter; /*untuk menyimpan bilangan integer*/
+                            char ch; /*untuk menyimpan karakter tunggal*/</code>
+                        <p>Ketika program mengeksekusi statement pendefinisian variabel, program mengalokasikan
+                            memori sebesar dari tipe data dan mereferensikan alamat memori yang dialokasikan ke nama
+                            variabel.</p>
+                        <p>Setelah didefinisikan, selanjutnya dapat menugaskan variabel tersebut dengan nilai yang sesuai
+                            dengan tipe data dari variabel tersebut</p>
+                        <p>Contoh penugasan variabel adalah sebagai berikut :</p>
+
+                        <code>int counter;
+                            counter = 0;
+                            
+                            /*penugasan juga dapat dilakukan dalam 1 baris*/
+                                int counter = 0;</code>
+
+                        <p>Nama yang dapat kita gunakan sebagai nama variabel harus mengikuti ketentuan penamaan
+                            identifier (pengidentifikasi). Identifier adalah nama yang ditentukan programmer untuk beberapa
+                            elemen-elemen program seperti : variabel, fungsi, class, dan sebagainya.</p>
+                            <p>Ketentuan penamaan identifier dalam C++:</p>
+
+                            <ul>
+                                <li>Karakter pertama harus berupa huruf besar A s.d Z, huruf kecil a s.d z, atau berupa
+                                    karakter underscore _.
+                                    </li>
+                                <li>Karakter setelah karakter pertama dapat berupa huruf besar A s.d Z, huruf kecil a s.d z,
+                                    angka 0 s.d 9, atau underscore.
+                                    </li>
+                                <li>Huruf besar dan huruf kecil membedakan. Ini berarti ItemsOrdered tidak sama dengan
+                                    itemsordered .</li>
+                                <li>Tidak menggunakan keyword (nama-nama yang sudah dicadangkan dan mempunyai arti
+                                    tertentu dalam Bahasa C++).</li>
+                            </ul>
+
+                            <p>Keyword yang tidak dapat digunakan sebagai nama identifier dalam C++ adalah sebagai berikut :</p>
+                            <img src="img/keyword.jpg" alt="">
+                            <p>Meskipun dapat menggunakan nama apapun untuk variabel sepanjang mengikuti ketentuan
+                                penamaan identifier, programmer C++ umumnya mengikuti konvensi berikut untuk penamaan
+                                variable:</p>
+                                <ul>
+                                    <li>Huruf pertama berupa huruf kecil: item, jumlah.
+                                    </li>
+                                    <li>Jika nama variabel terdiri dari lebih dari satu suku kata, suku kata kedua dan seterusnya
+                                        dikapitalisasi: hariLibur, jarakTahunCahaya</li>
+                                </ul>
+                                <p>Contoh-contoh penamaan variabel yang valid dan tidak valid adalah sebagai berikut :</p>
+
+                                <table border="10" cellspacing="0" cellpadding="5" >
+                                    <tr>
+                                        <td><strong>Variabel</td>
+                                        <td>Valid atau Tidak Valid?</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>dayOfWeek</td>
+                                        <td>Valid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3dGraph</td>
+                                        <td>Tidak Valid. Nama variabel tidak boleh dimulai dengan angka.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>_employee_num</td>
+                                        <td>Valid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>June1998</td>
+                                        <td>Valid.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mixture#3</td>
+                                        <td>Tidak Valid. Nama variabel hanya boleh menggunakan huruf, angka,
+                                            atau underscore.</td>
+                                    </tr>
+                                </table>
+
+                                <p>Berikut adalah contoh program inisialisasi variabel :
+                                </p>
+                                <code>#include<*iostream>
+                                    using namespace std;
+                                    int main()
+                                    {
+                                    int bulan = 2;
+                                    int hari = 28;
+                                    cout << "Bulan " << bulan << " mempunyai " << hari << " hari.\n";
+                                    return 0;
+                                    }</code>
+                                    <p>Output :</p>
+                                    <code>Bulan 2 mempunya 28 hari.</code>
+                </article>
+        </section>
+    </main>
+</body>
+</html>
